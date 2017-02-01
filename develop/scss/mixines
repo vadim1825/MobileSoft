@@ -1,0 +1,18 @@
+@mixin position($position, $top, $left) {
+	position: $position;
+	top: $top;
+	left: $left;
+}
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin text($color, $family, $size) {
+	color: $color;
+	font: {
+		family: $family, "Arial", sans-serif;
+		size: $size;
+	}
+}

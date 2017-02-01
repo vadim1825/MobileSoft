@@ -1,0 +1,166 @@
+@import 'fonts';
+
+@import 'mixines';
+
+.background {
+	position: relative;
+	width: 439px;
+	height: 328px;
+	margin: 0 auto;
+	background-image: url(../../develop/img/bg.png);
+
+	.dealer {
+		@include position(absolute, 51px, 206px);
+		@include size(60px, 72px);
+		background: url(../../develop/img/dealer.png);
+	}
+
+	.table {
+		@include position(absolute, 104px, 114px);
+		@include size(243px, 118px);
+		border-radius: 59px;
+		background-clip: padding-box;
+		background: url(../../develop/img/border.png);
+		background-position: -114px -84px;
+		box-shadow: 0 8px 13px rgba(41,27,14,.97);
+		overflow: hidden;
+
+		.green {
+			@include size(231px, 107px);
+			margin: 6px 0px 0px 6px;
+			border-radius: 56px / 54px;
+			background-clip: padding-box;
+			background-color: #5bad57;
+			box-shadow: inset 0 4px 3px rgba(0,0,0,.36), inset 0 0 5px rgba(17,80,18,.75);
+			overflow: hidden;
+
+			.double_green {
+				display: block;
+				margin: -20px 0px 0px -20px;
+			}
+
+			.text {
+				@include position(absolute, -3px, 93px);
+				opacity: .62;
+				@include text(#fff, "Days", 16px);
+			}
+
+			.board_cards {
+				@include position(absolute, 30px, -11px);
+
+				.list {
+					list-style: none;
+
+					li {
+						padding-left: 2px;
+						position: relative;
+						@include size(30px, 45px);
+						display: inline-block;
+						margin-right: 1px;
+						background-color: #fff;
+						border-radius: 2px; 
+
+						div {
+							@include size(18px, 18px);
+							@include position(absolute, 15px, 9px);
+							background: url(../../develop/img/sprite.png);
+						}
+
+						.bubi {
+							background-position: 0 0;
+						}
+
+						.chervi {
+							background-position: -19px 0;
+						}
+
+						.kresti {
+							background-position: 33px 0;
+						}
+
+						.piki {
+							background-position: 16px 0;
+						}
+					}
+
+					.one,
+					.two,
+					.five {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+
+	.hand_bg {
+		@include size(120px, 84px);
+		@include position(absolute, 207px, 65px);
+		background: url(../../develop/img/hand_bg.png) no-repeat;
+
+		.chip {
+			@include position(absolute, 10px, 3px);
+		}
+		.first {
+			padding-left: 2px;
+			@include position(relative, 12px, 38px);
+			@include size(30px, 45px);
+			background-color: #fff;
+			border-radius: 2px;
+			transform: rotate(-7deg);
+			color: red;
+			border: 1px solid rgba(113, 99, 69, .3);
+
+			div {
+				@include position(absolute, 15px, 9px);
+				@include size(18px, 18px);
+				background: url(../../develop/img/sprite.png);
+			}
+		}
+
+		.second {
+			padding-left: 2px;
+			@include position(relative, -35px, 57px);
+			@include size(30px, 45px);
+			background-color: #fff;
+			border-radius: 2px;
+			transform: rotate(16deg);
+			border: 1px solid rgba(113, 99, 69, .3);
+
+			div {
+				@include position(absolute, 15px, 9px);
+				@include size(18px, 18px);
+				background: url(../../develop/img/sprite.png);
+				background-position: 16px 0;
+			}
+		}
+
+		.win {
+			@include position(absolute, 44px, 40px);
+			@include size(45px, 17px);
+			opacity: .99;
+			border-radius: 3px;
+			background-clip: padding-box;
+			background: linear-gradient(to bottom, #77c139 1%,#1b7f13 100%);
+			@include text(#eaf9ee, "Arial", 14px);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.number {
+			background: url(../../develop/img/number.png) no-repeat;
+			@include text(#eaf9ee, "Arial", 12px);
+			@include position(absolute, 50px, 26px);
+			@include size(22px, 22px);
+			font-weight: bold;
+			padding-left: 3px;
+			line-height: 22px;
+		}
+
+		.combination {
+			@include position(absolute, 62px, 48px);
+			@include text(#d9390a, "Arial", 12px);
+			font-weight: bold;
+		}
+	}
+}
